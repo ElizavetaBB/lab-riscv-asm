@@ -9,6 +9,8 @@ matrix:
 	.word 34, 10, 120, 45
 start_print:
 	.asciiz "Index of max element: ("
+end_print:
+    .asciiz ")\n"
 
 .text
 
@@ -63,8 +65,8 @@ print:
 	addi sp, sp, 8
 	ecall
     
-    addi a0, x0, 11
-	addi a1, x0, 41
+    addi a0, x0, 4
+	la a1, end_print
 	ecall
     
 	ret

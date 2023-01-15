@@ -10,7 +10,7 @@ default: $(dump_name) $(executable_name)
 
 %.dump: %.elf
 	@riscv64-unknown-elf-objdump -D $< > $@
-
+	
 clean:
 	@rm -f $(dump_name)
 	@rm -f $(executable_name)
