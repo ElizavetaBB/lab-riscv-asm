@@ -10,7 +10,7 @@ matrix:
 start_print:
 	.asciiz "Index of max element: ("
 end_print:
-    .asciiz ")\n"
+    	.asciiz ")\n"
 
 .text
 
@@ -24,7 +24,7 @@ main:
 
 find_max_index:
 	lw t2, 0(a0) # max value
-    addi t0, x0, 1 # collumn index
+    	addi t0, x0, 1 # collumn index
 	addi t1, x0, 0 # row index
 	addi sp, sp, -8
 	sw x0, 0(sp) # max_x 
